@@ -1,0 +1,415 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.vibur-regular {
+    font-family: "Vibur", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.7), rgba(255, 182, 193, 0.6),rgba(221, 160, 221, 0.5), rgba(219, 236, 255, 0.5));
+    animation: swirlAnimation 15s linear infinite;
+    background-size: 200% 200%; /* Ensures movement across the screen */
+    z-index: -1; /* Moves the background behind other content */
+    pointer-events: none; 
+}
+
+
+@keyframes swirlAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.title {
+    font-size: 6rem; /* Increased size of the title */
+    text-align: center;
+    color: #fff;
+    opacity: 0; /* Start as invisible */
+    transform: scale(0.8); /* Start small */
+    animation: fadeInGrow 2s ease-out forwards; /* Animation duration and easing */
+    position: absolute;
+top:270px;
+right:240px;
+
+    width: auto; /* Ensure it doesn’t stretch out unexpectedly */
+    font-family: 'Pacifico', cursive; /* Apply Pacifico font */
+}
+
+/* Fade and grow animation */
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.buttons {
+    opacity: 0;
+    display: flex;
+ 
+}
+
+#get-response-button {
+position: absolute;
+    padding: 12px 24px;
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white; 
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 530px;   
+    left: 340px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   
+}
+
+#get-response-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+#get-response-button2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+#get-response-button3:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+#get-response-button4:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+#get-response-button5:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+#get-response-button6:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  #get-response-button7:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  #get-response-button8:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+#get-response-button2 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 530px;   
+    left:650px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+ 
+}
+
+#get-response-button3 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 530px;   
+    left:960px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#get-response-button4 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 530px;   
+    left:1270px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#get-response-button5 {
+
+    padding: 12px 24px;
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white; 
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 610px;   
+    left: 270px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   
+}
+
+#get-response-button6 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 610px;   
+    left:630px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#get-response-button7 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 610px;   
+    left:960px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#get-response-button8 {
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-family: 'Lora', serif;
+    color: #c7c6c9; 
+    background-color: white;
+    border: 3px solid #ffb6c1; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    outline: none; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    position: fixed;  
+    top: 610px;   
+    left:1270px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.response-display {
+
+    opacity: 1;
+    transform: scale(1);
+    animation: float-and-fade 3s ease-out forwards;
+}
+
+.exploding-message {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    pointer-events: none; /* Ignore pointer events */
+}
+
+.response-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color:#c7c6c9;
+    background-color: white;
+    border: 3px solid #ffb6c1;
+    text-transform: uppercase; 
+font-weight: bold; 
+    border-radius: 25px; 
+    cursor: pointer;
+    outline: none; 
+    margin: 10px;
+    transition: all 0.3s ease;
+     transform: scale(0.8); /* Start small */
+    animation: fadeInGrow 2s ease-out forwards; /* Animation duration and easing */
+}
+
+.response-button:hover {
+    background-color: #739ff7;
+    color:white;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 buttons per row */
+    grid-gap: 20px;  /* Spacing between buttons */
+    justify-items: center;  /* Center buttons horizontally within grid cells */
+    align-items: center;  /* Center buttons vertically within grid cells */
+    padding-top: 550px;  /* Adds space from the top of the page */
+    padding-left: 40px;
+}
+
+#offline-world {
+    background-color: blue;
+}
+.pop-message {
+    position: absolute;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    font-family: 'Lora', serif;
+}
+
+.content-container {
+
+    position: absolute;
+    top: 300px;
+    left: 310px;
+    width: 70vw;
+    height: 45vh;
+    pointer-events: none;
+    z-index: 1;  /* Ensure it's above the buttons and title */
+
+}
+
+#offline-world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally centers the container */
+    align-items: center; /* Vertically centers the container */
+    background-color: #739ff7;
+}
+
+
+
+
+h1 {
+    font-size: 4rem; /* Increased size of the title */
+    text-align: center;
+    color: #fff;
+    opacity: 0; /* Start as invisible */
+    transform: scale(0.8); /* Start small */
+    animation: fadeInGrow 2s ease-out forwards; /* Animation duration and easing */
+    position: absolute;
+top:250px;
+right:400px;
+
+    width: auto; /* Ensure it doesn’t stretch out unexpectedly */
+
+}
+
+#link {
+    position:absolute;
+    top:700px;
+    right:900px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

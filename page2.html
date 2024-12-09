@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline</title>
+  <style>
+    /* Chat Box Styles */
+    #offline-world {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: plum;
+    }
+
+    .chat-container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      top:150px;
+    }
+
+    .messages {
+      height: 150px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding-right: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #userInput {
+      flex-grow: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #sendButton {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    #sendButton:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      max-width: 80%;
+    }
+
+    h1 {
+    font-size: 3rem; /* Increased size of the title */
+    text-align: center;
+    color: #fff;
+    opacity: 0; /* Start as invisible */
+    transform: scale(0.8); /* Start small */
+    animation: fadeInGrow 2s ease-out forwards; /* Animation duration and easing */
+    position: absolute;
+top:50px;
+right:200px;
+text-align: center;
+justify-content: center;
+
+    width: auto; /* Ensure it doesn’t stretch out unexpectedly */
+
+}
+
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+  </style>
+</head>
+<body>
+
+  <div id="offline-world">
+    <h1>It's Quiet Here.<br> Tell me how you really feel, about anything.
+    <br>
+    <br>
+Talk to yourself for as long as you want, 
+<br>
+no one and nothing is here to listen or answer.
+<br>
+<br>
+When you're ready to face the internet again, turn the WiFi back on.</h1>
+    <div class="chat-container">
+      <div class="messages" id="messages">
+        <!-- Messages will appear here -->
+      </div>
+      <div class="input-container">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button id="sendButton">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery Script -->
+  <script>
+    $(document).ready(function() {
+      // When the send button is clicked
+      $('#sendButton').click(function() {
+        // Get the value from the input field
+        var userMessage = $('#userInput').val();
+
+        // If there is a message
+        if (userMessage.trim() !== '') {
+          // Create a new message element and add it to the messages container
+          var newMessage = $('<div class="message"></div>').text(userMessage);
+          $('#messages').append(newMessage);
+
+          // Scroll to the bottom of the messages container
+          $('#messages').scrollTop($('#messages')[0].scrollHeight);
+
+          // Clear the input field after sending
+          $('#userInput').val('');
+        }
+      });
+
+      // Optional: Allow the user to hit 'Enter' to send the message
+      $('#userInput').keypress(function(e) {
+        if (e.which === 13) { // 13 is the keycode for 'Enter'
+          $('#sendButton').click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
