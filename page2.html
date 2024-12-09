@@ -154,6 +154,16 @@ When you're ready to face the internet again, turn the WiFi back on.</h1>
         }
       });
     });
+
+    NewMessagesRef.on('value', function (snapshot) {
+            let dataDisplay = document.getElementById('dataDisplay2');
+            dataDisplay.innerHTML = ''; 
+            snapshot.forEach(function (childSnapshot) {
+                let childData = childSnapshot.val();
+                dataDisplay.innerHTML +=
+                    `<p>Something Nice: ${childData.nice}}</p>`;
+            });
+        });
   </script>
 </body>
 </html>
