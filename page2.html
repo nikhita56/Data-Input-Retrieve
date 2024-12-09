@@ -155,15 +155,20 @@ When you're ready to face the internet again, turn the WiFi back on.</h1>
       });
     });
 
-    NewMessagesRef.on('value', function (snapshot) {
-            let dataDisplay = document.getElementById('dataDisplay2');
-            dataDisplay.innerHTML = ''; 
-            snapshot.forEach(function (childSnapshot) {
-                let childData = childSnapshot.val();
-                dataDisplay.innerHTML +=
-                    `<p>Something Nice: ${childData.nice}}</p>`;
-            });
-        });
+    function checkOnlineStatus() {
+    if (navigator.onLine) {
+        document.getElementById('offline-world').style.display = 'none';
+        document.getElementById('online-world').style.display = 'block';
+    } else {
+        document.getElementById('offline-world').style.display = 'block';
+        document.getElementById('online-world').style.display = 'none';
+    }
+}
+
+window.addEventListener('load', checkOnlineStatus);
+
+window.addEventListener('online', checkOnlineStatus);
+window.addEventListener('offline', checkOnlineStatus);
   </script>
 </body>
 </html>
